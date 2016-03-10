@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Session Tracker</title>
+
+    <!--<link rel="stylesheet" href="/assets/styles/style.css">-->
+
+    <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <!--<script type="text/javascript" src="/vendors/angular.min.js.map"></script>-->
+    <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
+    <!--<script type="text/javascript" src="/vendors/angular-route.min.js.map"></script>-->
+    <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/tracker.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/input.js"></script>
+
+</head>
+<body ng-app="myApp">
+<div>
+    <div class="container">
+        <p ng-include="'/templates/nav.html'"></p>
+        <!--<h1 id="welcome" class="lead">Welcome, {{userName}}!</h1>-->
+    </div>
+    <div>
+        <main ng-view></main>
+    </div>
+</div>
+</body>
+</html>

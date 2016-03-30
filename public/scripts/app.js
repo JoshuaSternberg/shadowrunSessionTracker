@@ -11,4 +11,7 @@ myApp.config(['$routeProvider', function($routeProvider) {
             templateUrl: '/views/templates/input.html',
             controller: 'Input'
         })
+        .otherwise({
+            redirectTo: '/tracker'
+        });
 }]);

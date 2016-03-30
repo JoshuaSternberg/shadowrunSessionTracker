@@ -1,1 +1,119 @@
-<h1>input.html!</h1>
+<form id="input">
+    <div id="general">
+        <label for="charName">NPC Name:</label>
+        <input type="text" ng-model="charName" id="charName"/>
+        <label for="charMetatype">Metatype:</label>
+        <input type="text" ng-model="charMetatype" id="charMetatype"/>
+        <input class="saveChar" type="submit" value="Save Character" ng-click="saveChar()"/>
+        <button class="cancel" ng-click="trackerView()">Cancel</button>
+    </div>
+
+    <div id="attributes">
+        <p class="attributes">Attributes:</p>
+        <label for="charBody">Body:</label>
+        <input type="text" ng-model="charBody" id="charBody"/>
+        <label for="charAgility">Agility:</label>
+        <input type="text" ng-model="charAgility" id="charAgility"/>
+        <label for="charReaction">Reaction:</label>
+        <input type="text" ng-model="charReaction" id="charReaction"/>
+        <label for="charStrength">Strength:</label>
+        <input type="text" ng-model="charStrength" id="charStrength"/>
+        <label for="charWillpower">Willpower:</label>
+        <input type="text" ng-model="charWillpower" id="charWillpower"/>
+        <label for="charIntuition">Intuition:</label>
+        <input type="text" ng-model="charIntuition" id="charIntuition"/>
+        <label for="charLogic">Logic:</label>
+        <input type="text" ng-model="charLogic" id="charLogic"/>
+        <label for="charCharisma">Charisma:</label>
+        <input type="text" ng-model="charCharisma" id="charCharisma"/>
+        <label for="charEdge">Edge:</label>
+        <input type="text" ng-model="charEdge" id="charEdge"/>
+        <label for="charMagicOrResonance">Magic/Resonance:</label>
+        <input type="text" ng-model="charMagicOrResonance" id="charMagicOrResonance"/>
+    </div>
+
+    <div id="derivedAttributes">
+        <p class="derivedAttributes">Derived Attributes:</p>
+        <label for="charEssence">Essence:</label>
+        <input type="text" ng-model="charEssence" id="charEssence"/>
+        <label for="charInitiative">Initiative:</label>
+        <input type="text" ng-model="charInitiative" id="charInitiative"/>
+        <label for="charMatrixInitiative">Matrix Initiative:</label>
+        <input type="text" ng-model="charMatrixInitiative" id="charMatrixInitiative"/>
+        <label for="charAstralInitiative">Astral Initiative:</label>
+        <input type="text" ng-model="charAstralInitiative" id="charAstralInitiative"/>
+        <label for="charComposure">Composure:</label>
+        <input type="text" ng-model="charComposure" id="charComposure"/>
+        <label for="charJudgeIntent">Judge Intentions:</label>
+        <input type="text" ng-model="charJudgeIntent" id="charJudgeIntent"/>
+        <label for="charMemory">Memory:</label>
+        <input type="text" ng-model="charMemory" id="charMemory"/>
+        <label for="charLiftCarry">Lift/Carry:</label>
+        <input type="text" ng-model="charLiftCarry" id="charLiftCarry"/>
+        <label for="charMovement">Movement:</label>
+        <input type="text" ng-model="charMovement" id="charMovement"/>
+        <label for="charPhysicalLimit">Physical Limit:</label>
+        <input type="text" ng-model="charPhysicalLimit" id="charPhysicalLimit"/>
+        <label for="charMentalLimit">Mental Limit:</label>
+        <input type="text" ng-model="charMentalLimit" id="charMentalLimit"/>
+        <label for="charSocialLimit">Social Limit:</label>
+        <input type="text" ng-model="charSocialLimit" id="charSocialLimit"/>
+        <label for="charPhysicalTrack">Physical Track:</label>
+        <input type="text" ng-model="charPhysicalTrack" id="charPhysicalTrack"/>
+        <label for="charStunTrack">Stun Track:</label>
+        <input type="text" ng-model="charStunTrack" id="charStunTrack"/>
+        <label for="charArmor">Armor:</label>
+        <input type="text" ng-model="charArmor" id="charArmor"/>
+        <br><label for="charNotes">Notes:</label>
+        <br><textarea rows="4" cols="100" ng-model="charNotes" id="charNotes"></textarea>
+    </div>
+
+
+    <div id="skills">
+        <p class="skills">Skills:</p>
+        <label for="charSkill">Enter skill:</label>
+        <input type="text" ng-model="charSkill" id="charSkill"/>
+        <label for="charSkillRank">Enter Skill Rank:</label>
+        <input type="text" ng-model="charSkillRank" id="charSkillRank"/>
+        <button class="addSkill" ng-click="">Add Skill:</button>
+
+    </div>
+
+    <div id="skillList">
+    </div>
+
+
+    <div id="weaponStats">
+        <p class="weaponStats">Weapon Stats:</p>
+
+       <div id="weaponLabels">
+           <label class="weapon" for="weaponType">Weapon Type:</label>
+           <br><label class="weapon" for="weaponDamage">Weapon Damage:</label>
+           <br><label class="weapon" for="weaponArmorPiercing">Armor Piercing:</label>
+           <br><label class="weapon" for="weaponFireModes">Firing Modes:</label>
+           <br><label class="weapon" for="weaponAmmoType">Ammo Type:</label>
+           <br><label class="weapon" for="weaponRecoilCompensation">Recoil Compensation:</label>
+           <br><label class="weapon" for="weaponAccuracy">Accuracy:</label>
+       </div>
+
+        <div id="weaponInput">
+            <input type="text" ng-model="weaponType" id="weaponType"/>
+            <br><input type="text" ng-model="weaponDamage" id="weaponDamage"/>
+            <br><input type="text" ng-model="weaponArmorPiercing" id="weaponArmorPiercing"/>
+            <br><input type="text" ng-model="weaponFireModes" id="weaponFireModes"/>
+            <br><input type="text" ng-model="weaponAmmoType" id="weaponAmmoType"/>
+            <br><input type="text" ng-model="weaponRecoilCompensation" id="weaponRecoilCompensation"/>
+            <br><input type="text" ng-model="weaponAccuracy" id="weaponAccuracy"/>
+        </div>
+
+        <div class="weaponNotesDiv">
+            <label class=weaponNotesLabel" for="weaponNotes">Notes:</label>
+            <textarea rows="4" cols="61" ng-model="weaponNotes" id="weaponNotes"></textarea>
+            <button class="addWeapon" ng-click="">Add Weapon:</button>
+        </div>
+    </div>
+
+    <div id="weaponList">
+
+    </div>
+</form>

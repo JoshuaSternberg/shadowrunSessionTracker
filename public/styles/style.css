@@ -1,0 +1,356 @@
+@font-face {
+    font-family: "orbitron-light";
+    src: url("fonts/orbitron-light.otf") format("truetype");
+}
+
+body {
+    width: 90%;
+    margin: auto;
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+}
+
+/*Affects the two h1s in the index.html and failure.html pages*/
+h1 {
+    margin-top: 0px;
+    margin-bottom: 60px;
+    color: #ff9000;
+    font-size: 50px;
+    text-align: center;
+    font-family: orbitron-light;
+}
+
+/*Gives a light grey background color and small spacing to all inputs in all forms*/
+input {
+    background-color: #d3d3d3;
+    margin-top: 2px;
+}
+
+/*Make all the buttons black with orange text!*/
+button {
+    background-color: black;
+    color: #ff9000;
+}
+
+/*Background image styling for the failure page*/
+#failure {
+    background-image: url("../views/images/1200x630bf.jpg");
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position-x: center;
+    background-position-y: 250px;
+}
+
+/*Affects the user.html and failure.html styling*/
+.container {
+    color: #FAF55D;
+    text-align: center;
+}
+
+/*index.html image styling*/
+#indexPage {
+    width: 800px;
+    background-image: url("../views/images/566175.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 150px;
+}
+
+/*user.html image styling*/
+#userPage {
+    background-image: url("../views/images/srttbg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/*Style the header in index.html and the sub-headings on the same page*/
+header, .loginInfo {
+    text-align: center;
+}
+
+/*Style affecting the login form as a whole*/
+.loginForm {
+    width: 35%;
+    margin: auto;
+}
+
+/*styling to the text fields in the index.html login page form*/
+.login {
+    float: left;
+    color: white;
+    margin-top: 2px;
+}
+
+/*Styling for the input 'buttons' on index.html*/
+.loginButton {
+    margin-top: 10px;
+    color: #ff9000;
+    background-color: black;
+    height: 25px;
+    width: 150px;
+    font-size: 15px;
+}
+
+/*Styling for the sub-headings on index.html*/
+.loginInfo {
+    font-size: 19px;
+}
+
+/*Styling for the text on failure.html*/
+.backToLogin {
+    font-size: 35px;
+}
+
+/*Positiong for the fields on index.html*/
+#username, #password, #newUsername, #newPassword  {
+    float: right;
+}
+
+/*Changing the sub-headings on tracker.html*/
+h2 {
+    color: #FAF55D;
+}
+
+
+
+
+/*Styling specifically for the tracker.html view*/
+
+
+
+
+/*Styling for the top div on the tracker.html view*/
+#session {
+    margin: 30px 0px 50px 30px;
+    /*margin-top: 30px;*/
+    /*margin-bottom: 50px;*/
+    /*margin-left: 30px;*/
+    /*margin-right: 30px;*/
+}
+
+/*styling for the large buttons in the session div in the tracker.html view*/
+#session>button {
+    height: 30px;
+    width: 200px;
+    font-size: 15px;
+    background-color: black;
+    color: #ff9000;
+}
+
+/*styling for the tracker.html view*/
+.sessionList {
+    height: 20px;
+    width: 150px;
+    background-color: #d3d3d3;
+}
+
+/*Style the ng-options dropdowns*/
+.preMadeNpcSelectList, .customNpcSelect {
+    background-color: #d3d3d3;
+}
+
+/**/
+#customNpcViewBar {
+    width: 45%;
+    float: right;
+}
+
+/**/
+#defaultNpcViewBar {
+    width: 45%;
+    float: left;
+}
+
+/*styling for the display of each npc in the tracker.html view*/
+.npc {
+    border-top: 2px solid #DAA520;
+    border-bottom: 2px solid #DAA520;
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+    padding: 5px;
+    background-color: #707070;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+/*styling for the delete button on the display of each npc in the tracker.html view*/
+.deleteChar {
+    float: right;
+}
+
+/*Styling for the name of each npc display object in the tracker.html view*/
+.trackerCharName {
+    color: #DAA520;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+/*Styling for the section headings of each npc display object in the tracker.html view*/
+.charDisplaySub-header {
+    color: #DAA520;
+    font-size: 15px;
+    margin-bottom: 1px;
+    padding-bottom: 1px;
+    margin-top: 1px;
+    padding-top: 1px;
+}
+
+/*Styling for the div wrapping the attributes in the tracker.html view*/
+.attributesHeaderStyling {
+    background-color: black;
+    color: #DAA520;
+    border: 1px solid #DAA520;
+    margin: 1px;
+    padding: 1px;
+}
+
+.attributesStyling {
+    margin-top: 1px;
+    padding-top: 1px;
+    margin-bottom: 1px;
+    padding-bottom: 1px;
+}
+
+/*Styling for the attributes header on the npc display in the tracker.html view*/
+.attributesHeaderSpacingSpan {
+    margin-right: 20px;
+}
+
+/*Styling for the attributes on the npc display in the tracker.html view*/
+.attributesSpacingSpan {
+    margin-right: 19px;
+}
+
+/**/
+.attributesSpacingSpanStart {
+    margin-right: 20px;
+    margin-left: 4px;
+    margin-top: 1px;
+    padding-top: 1px;
+}
+
+/*Styling for the attributes header on the npc display in the tracker.html view*/
+.skillsWeaponsHeaderSpacingSpan {
+    display: inline;
+}
+
+
+
+
+
+
+
+
+
+/*Styling for the condition monitors on the display of each npc in the tracker.html view*/
+.conditionMonitor, .stunConditionMonitor {
+    display: inline;
+    margin-top: 1px;
+    padding-top: 1px;
+    margin-bottom: 1px;
+    padding-bottom: 1px;
+}
+
+
+
+
+    /*input.html view specific styling:*/
+
+
+
+/*styling for the input form on the input.html view*/
+#input {
+    width: 60%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+/*spacing for the general div in the input.html view*/
+#general, #attributes {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+/*change the color of the fonts for the section titles in the input.html view */
+#general, .attributes, .derivedAttributes, .skills, .weaponStats {
+    color: #FAF55D;
+    font-size: 20px;
+}
+
+/*spacing for the derivedAttributes div in the input.html view*/
+#derivedAttributes {
+    margin-bottom: 20px;
+    float: left;
+}
+
+/*positioning for the #skills and #skillList divs on the input.html view*/
+#skills, #skillList {
+    width: 50%;
+    float: left;
+}
+
+/*positioning for the #weaponStats and #weaponList divs on the input.html view*/
+#weaponStats, #weaponList {
+    width: 50%;
+    float: right;
+}
+
+/*Styling for the saveChar 'button' on the input.html view*/
+.saveChar {
+    background-color: black;
+    color: #ff9000;
+}
+
+/*Spacing for the all the input fields on the input.html view*/
+#charBody, #charAgility, #charReaction, #charStrength, #charWillpower, #charLogic, #charIntuition, #charCharisma,
+#charEdge, #charMagicOrResonance, #charEssence, #charInitiative, #charMatrixInitiative, #charAstralInitiative,
+#charComposure, #charJudgeIntent, #charMemory, #charLiftCarry, #charMovement, #charPhysicalLimit,
+#charMentalLimit, #charSocialLimit, #charPhysicalTrack, #charStunTrack, #charArmor, #charSkillRank {
+    width: 30px;
+    margin-bottom: 5px;
+}
+
+/*Changes the color on the text areas in the input.html view*/
+#charNotes, #weaponNotes {
+    background-color: #d3d3d3;
+}
+
+/*positioning for the div containing the labels in the weapon section in the input.html view*/
+#weaponLabels, .weaponNotesLabel {
+    float: left;
+}
+
+/*positioning for the input containing the divs in the weapon section in the input.html view*/
+#weaponInput {
+    float: right;
+}
+
+#weaponType, #weaponDamage, #weaponArmorPiercing, #weaponFireModes, #weaponAmmoType,
+#weaponRecoilCompensation, #weaponAccuracy {
+    float: right;
+    margin-bottom: 1px;
+}
+
+/*Spacing for the weaponNotes class in the input.html view*/
+#weaponNotes {
+    margin-top: 5px;
+}
+
+/*Spacing for the weaponNotes div that contains the notes and notes label in the input.html view*/
+.weaponNotesDiv {
+    float: right;
+    margin-top: 5px;
+}
+
+/*Spacing for the .weapon class in the input.html view*/
+.weapon {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+
+
+
+
+

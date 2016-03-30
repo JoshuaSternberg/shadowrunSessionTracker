@@ -1,1 +1,148 @@
-<h1>tracker.html!</h1>
+<div id="session">
+    <select class="sessionList" ng-model="selectedSession" ng-options="session as session.snapshot_name for session
+    in sessionArray">
+    </select>
+
+    <button class="load" ng-click="loadSession(selectedSession)">Load Selected Session</button>
+    <button class="save" ng-click="saveSession()">Save This Session</button>
+    <button class="changeUser" ng-click="loginView()">Change User</button>
+
+</div>
+
+<div id="defaultNpcViewBar">
+    <select class="preMadeNpcSelectList" ng-model="preMadeNpcSelect" ng-options="npc as npc.name for npc in characterArray
+        | filter:{ source : 'pre-made'}">
+    </select>
+
+    <button class="addPreMadeNpc" ng-click="addPreMadeNpc(preMadeNpcSelect)">Add NPC</button>
+
+    <h2>Pre-built NPCs:</h2>
+
+    <div id="defaultNpcView">
+        <div class="npc" ng-repeat="preMadeNpc in preMadeNpcArray track by $index">
+            <span class="trackerCharName">{{preMadeNpc.name}}</span>
+            <span>Metatype: {{preMadeNpc.metatype}}</span>
+            <button class="deleteChar" ng-click="deletePreMadeChar($index)">X</button>
+
+
+            <p class="charDisplaySub-header">Attributes:</p>
+            <p class="attributesHeaderStyling">
+                <span class="attributesHeaderSpacingSpan">B</span><span class="attributesHeaderSpacingSpan">A</span>
+                <span class="attributesHeaderSpacingSpan">R</span><span class="attributesHeaderSpacingSpan">S</span>
+                <span class="attributesHeaderSpacingSpan">W</span><span class="attributesHeaderSpacingSpan">L</span>
+                <span class="attributesHeaderSpacingSpan">I</span><span class="attributesHeaderSpacingSpan">C</span>
+                <span class="attributesHeaderSpacingSpan">Ess</span>
+            </p>
+
+            <p class="attributesStyling">
+                <span class="attributesSpacingSpanStart">{{preMadeNpc.body}}</span>
+                <span class="attributesSpacingSpan">{{preMadeNpc.agility}}</span>
+                <span class="attributesSpacingSpan">{{preMadeNpc.reaction}}</span>
+                <span class="attributesSpacingSpan">{{preMadeNpc.strength}}</span>
+                <span class="attributesSpacingSpan">{{preMadeNpc.willpower}}</span>
+                <span class="attributesSpacingSpan">{{preMadeNpc.logic}}</span>
+                <span class="attributesSpacingSpan">{{preMadeNpc.intuition}}</span>
+                <span class="attributesSpacingSpan">{{preMadeNpc.charisma}}</span>
+                <span class="attributesSpacingSpan">{{preMadeNpc.essence}}</span>
+            </p>
+
+            <p>
+                <span class="charDisplaySub-header">Initiative: </span>{{preMadeNpc.initiative}}
+                <span class="charDisplaySub-header">Astral Initiative: </span>{{preMadeNpc.astral_initiative}}
+                <span class="charDisplaySub-header">Matrix Initiative: </span>{{preMadeNpc.matrix_initiative}}
+                <span class="charDisplaySub-header">Armor: </span>{{preMadeNpc.armor}}
+            </p>
+
+            <p class="charDisplaySub-header">Skills:</p>
+            <div class="skillsWeaponsHeaderSpacingSpan" ng-repeat="skill in preMadeNpc.skills track by $index" >
+                <span>{{skill.name}} {{skill.rank}},</span>
+            </div>
+
+            <p class="charDisplaySub-header">Weapons:</p>
+            <div class="skillsWeaponsHeaderSpacingSpan" ng-repeat="weapon in preMadeNpc.weapon track by $index">
+                <span>{{weapon.model}} [{{weapon.type}}, Acc {{weapon.accuracy}}, {{weapon.damage}},
+                     {{weapon.armor_piercing}}, {{weapon.firing_modes}}, {{weapon.recoil_compensation}},
+                     {{weapon.ammo_count}}, {{weapon.notes}}]
+                </span><br>
+            </div>
+
+            <p class="charDisplaySub-header">Health:</p>
+            <form class="conditionMonitor" ng-repeat="healthBox in preMadeNpc.current_health track by $index">
+                <input ng-model="healthBox.value" type="checkbox">
+            </form>
+            <p class="charDisplaySub-header">Stun:</p>
+            <form class="stunConditionMonitor" ng-repeat="stunBox in preMadeNpc.current_stun track by $index">
+                <input ng-model="stunBox.value" type="checkbox">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div id="customNpcViewBar">
+    <select class="customNpcSelect" ng-model="customNpcSelect" ng-options="npc as npc.name for npc in characterArray
+        | filter:{ source : 'custom'}">">
+    </select>
+
+    <button class="addCustomNpc" ng-click="addCustomNpc(customNpcSelect)">Add custom NPC</button>
+    <button class="createCustomNpc" ng-click="inputView()">Create Custom NPC</button>
+    <h2>Custom NPCs:</h2>
+
+
+    <div id="customNpcView">
+        <div class="npc" ng-repeat="customNpc in customNpcArray track by $index">
+            <span class="trackerCharName">{{customNpc.name}}</span>
+            <button class="deleteChar" ng-click="deleteCustomChar($index)">X</button>
+            <span>Metatype: {{customNpc.metatype}}</span>
+
+            <p class="charDisplaySub-header">Attributes:</p>
+            <p class="attributesHeaderStyling"><span class="attributesHeaderSpacingSpan">B</span><span class="attributesHeaderSpacingSpan">A</span>
+                <span class="attributesHeaderSpacingSpan">R</span><span class="attributesHeaderSpacingSpan">S</span>
+                <span class="attributesHeaderSpacingSpan">W</span><span class="attributesHeaderSpacingSpan">L</span>
+                <span class="attributesHeaderSpacingSpan">I</span><span class="attributesHeaderSpacingSpan">C</span>
+                <span class="attributesHeaderSpacingSpan">Ess</span>
+            </p>
+
+            <p class="attributesStyling">
+                <span class="attributesSpacingSpanStart">{{preMadeNpc.body}}</span>
+                <span class="attributesSpacingSpan">{{preMadeNpc.agility}}</span>
+                <span class="attributesSpacingSpan">{{preMadeNpc.reaction}}</span>
+                <span class="attributesSpacingSpan">{{preMadeNpc.strength}}</span>
+                <span class="attributesSpacingSpan">{{preMadeNpc.willpower}}</span>
+                <span class="attributesSpacingSpan">{{preMadeNpc.logic}}</span>
+                <span class="attributesSpacingSpan">{{preMadeNpc.intuition}}</span>
+                <span class="attributesSpacingSpan">{{preMadeNpc.charisma}}</span>
+                <span class="attributesSpacingSpan">{{preMadeNpc.essence}}</span>
+            </p>
+
+            <p>
+                <span class="charDisplaySub-header">Initiative: </span>{{customNpc.initiative}}
+                <span class="charDisplaySub-header">Astral Initiative: </span>{{customNpc.astral_initiative}}
+                <span class="charDisplaySub-header">Matrix Initiative: </span>{{customNpc.matrix_initiative}}
+                <span class="charDisplaySub-header">Armor: </span>{{customNpc.armor}}
+            </p>
+
+            <p class="charDisplaySub-header">Skills:</p>
+            <div class="skillsWeaponsHeaderSpacingSpan" ng-repeat="skill in customNpc.skills track by $index" >
+                <span>{{skill.name}} {{skill.rank}},</span>
+            </div>
+
+            <p class="charDisplaySub-header">Weapons:</p>
+            <div class="skillsWeaponsHeaderSpacingSpan" ng-repeat="weapon in customNpc.weapon track by $index">
+                <span>{{weapon.model}} [{{weapon.type}}, Acc {{weapon.accuracy}}, {{weapon.damage}},
+                     {{weapon.armor_piercing}}, {{weapon.firing_modes}}, {{weapon.recoil_compensation}},
+                     {{weapon.ammo_count}}, {{weapon.notes}}]
+                </span><br>
+            </div>
+
+            <p class="charDisplaySub-header">Health:</p>
+            <form class="conditionMonitor" ng-repeat="healthBox in customNpc.current_health track by $index">
+                <input ng-model="healthBox.value" type="checkbox">
+            </form>
+            <p class="charDisplaySub-header">Stun:</p>
+            <form class="stunConditionMonitor" ng-repeat="stunBox in customNpc.current_stun track by $index">
+                <input ng-model="stunBox.value" type="checkbox">
+            </form>
+        </div>
+    </div>
+</div>
